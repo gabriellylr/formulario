@@ -1,0 +1,34 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+input
+{
+    border-radius: 2%;
+}
+input.radio
+{
+   border-radius: 2%;
+}
+h3, h4, h5, h6
+{
+    text-shadow: 1px 1px 2px black, 0 0 1em cornflowerblue, 0 0 0.2em black;
+    color: white;
+    font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+}
+h2
+    {
+        text-shadow: 1px 1px 2px black, 0 0 1em blueviolet	, 0 0 0.2em black;
+        color: whitesmoke;
+        font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+    }
+    h1
+    {
+        text-shadow: 1px 1px 2px white, 0 0 1em cornflowerblue, 0 0 0.2em blue;
+        color: whitesmoke;
+        font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+    }
+    body 
+    {
+        background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    }

@@ -1,0 +1,170 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Questionário</title>
+    <link rel="stylesheet" href="ESTILO.css">
+<script language="javascript">
+    function funcao()
+     {
+        var nome, cpf, sexo, email,aluno1, campus, necessidades, hobby, nec, sugestao, qual, msg,areas, selecao, observacoes;
+          
+            nomedoaluno = document.forum.nome.value;
+            sexodoaluno = document.forum.sexo.value;
+            cpf = document.getElementById("cpf");
+            email = document.forum.email.value;
+            aluno = document.forum.aluno1.value;
+    
+     
+
+
+            sugestao = document.forum.sug.value;
+            necessidades = document.forum.nec.value;
+
+            
+            qual ="";
+            qual += (document.forum.vis.checked?"Deficiencia Visual; ":"");
+            qual += (document.forum.aud.checked?"Auditiva;  ":"");
+            qual += (document.forum.mot.checked?"Motora;  ":"");
+            qual += (document.forum.Mental.checked?"Mental;  ":"");
+            qual += (document.forum.para.checked?"Paralisia Cerebral":"");
+
+            areas ="";
+            areas += (document.forum.tec.checked?"Tecnologia; ":"");
+            areas += (document.forum.exa.checked?"Exatas; ":"");
+            areas += (document.forum.hum.checked?"Humanas; ":"");
+            areas += (document.forum.bio.checked?"Biológicas; ":"");
+            areas += (document.forum.educ.checked?"Educação; ":"");
+
+            hobby ="";
+            hobby += (document.forum.Jar.checked?"Jardinagem; ":"");
+            hobby += (document.forum.Art.checked?"Artesanato; ":"");
+            hobby += (document.forum.lei.checked?"Leitura; ":"");
+            hobby += (document.forum.escri.checked?"Escrita; ":"");
+            hobby += (document.forum.mus.checked?"Música; ":"");
+            hobby += (document.forum.Pin.checked?"Pintura; ":"");
+            hobby += (document.forum.Rs.checked?"Redes Sociais; ":"");
+            hobby += (document.forum.via.checked?"Viagens; ":"");
+            hobby += (document.forum.ser.checked?"Séries; ":"");
+            hobby += (document.forum.acad.checked?"Academia; ":"");
+            hobby += (document.forum.out.checked?"Outros; ":"");
+            
+            campus = document.forum.select.value;
+            (necessidades=="Sim"?"Sim":"Não");
+            (sexodoaluno=="Feminino"?"Sra.":"Sr.");
+            
+        msg = "Olá," + nomedoaluno + ". É do sexo: " + sexodoaluno + aluno + ". Seu CPF é: " + cpf.value +", Seu E-mail:"+ email +", é de: "+ campus + 
+        ". Necessidades"+ necessidades+ ", Quais "+
+         qual+ " Área(s) de interesse: " + areas + " e seus hobbie(s): " + hobby
+         "<br> Sua sugestão foi: "+sugestao;
+
+        document.getElementById("destino").innerHTML= msg + " | " ;
+    }
+</script>
+
+</head>
+<body>
+    <center>
+    <h1>Q U E S T I O N Á R I O</h1>
+    <form name="forum">
+    <h2>Digite seu nome: <input type="text" name="nome"/><br><br></h2>
+    <h2>Digite o seu CPF: <input type="text" id="cpf" /><br><br>
+    <h2>Sexo:</h2> 
+    <input type="radio" name="sexo" value="Feminino">FEMININO
+    <input type="radio" name="sexo" value="Masculino">MASCULINO<br><br> 
+    
+    <h2>Você é aluno do Instituto federal:</h2> 
+    <input type="checkbox" name="aluno1" value="Sim">SIM
+    <input type="checkbox" name="aluno1" value="Nao">NÃO<br><br> 
+    
+    <h2>Digite o seu e-mail: <input type="text" id="email" /><br><br></h2>
+    
+    <h2>Você possui necessidades especiais:</h2> 
+    <input type="radio" name="nec" value="Sim">SIM
+    <input type="radio" name="nec" value="Nao">NÃO<br><br> 
+    
+    <h2>Quais:<br></h2>
+    <input type="checkbox" name="vis" value="v">DEFICIÊNCIA VISUAL
+    <input type="checkbox" name="aud" value="a">DEFICIÊNCIA AUDITIVA
+    <input type="checkbox" name="mot" value="m">DEFICIÊNCIA MOTORA<br>
+    <input type="checkbox" name="Mental" value="Me">DEFICIÊNCIA MENTAL
+    <input type="checkbox" name="para" value="p">PARALISIA CEREBRAL<br><br>
+    
+    <h2>Seu campus:</h2>
+    <select name="select">
+        <option value="Nenhum câmpus" selected>Nenhum câmpus</option>
+        <option value="Câmpus Araraquara" >Câmpus Araraquara</option>
+        <option value="Câmpus Avançado Fernandópolis" >Câmpus Avançado Fernandópolis</option>
+        <option value="Câmpus Avançado Ilha Solteira" >Câmpus Avançado Ilha Solteira</option>
+        <option value="Câmpus Avançado Jundiaí" >Câmpus Avançado Jundiaí</option>
+        <option value="Câmpus Avançado São Miguel Paulista" >Câmpus Avançado São Miguel Paulista</option>
+        <option value="Câmpus Avançado Tupã" >Câmpus Avançado Tupã</option>
+        <option value="Câmpus Avaré" >Câmpus Avaré</option>
+        <option value="Câmpus Barretos" >Câmpus Barretos</option>
+        <option value="Câmpus Birigui" >Câmpus Birigui</option>
+        <option value="Câmpus Bragança Paulista" >Câmpus Bragança Paulista</option>
+        <option value="Câmpus Campinas" >Câmpus Campinas</option>
+        <option value="Câmpus Campos do Jordão" >Câmpus Campos do Jordão</option>
+        <option value="Câmpus Caraguatatuba" >Câmpus Caraguatatuba</option>
+        <option value="Câmpus Catanduva" >Câmpus Catanduva</option>
+        <option value="Câmpus Cubatão" >Câmpus Cubatão</option>
+        <option value="Câmpus Guarulhos" >Câmpus Guarulhos</option>
+        <option value="Câmpus Hortolândia" >Câmpus Hortolândia</option>
+        <option value="Câmpus Itapetininga" >Câmpus Itapetininga</option>
+        <option value="Câmpus Itaquaquecetuba" >Câmpus Itaquaquecetuba</option>
+        <option value="Câmpus Jacarei" >Câmpus Jacarei</option>
+        <option value="Câmpus Matão" >Câmpus Matão</option>
+        <option value="Câmpus Piracicaba" >Câmpus Piracicaba</option>
+        <option value="Câmpus Pirituba" >Câmpus Pirituba</option>
+        <option value="Câmpus Presidente Epitácio" >Câmpus Presidente Epitácio</option>
+        <option value="Câmpus Registro" >Câmpus Registro</option>
+        <option value="Câmpus Salto" >Câmpus Salto</option>
+        <option value="Câmpus São Carlos" >Câmpus São Carlos</option>
+        <option value="Câmpus São João da Boa Vista" >Câmpus São João da Boa Vista</option>
+        <option value="Câmpus São João do Rio Preto" >Câmpus São João do Rio Preto</option>
+        <option value="Câmpus São José dos Campos" >Câmpus São José dos Campos</option>
+        <option value="Câmpus São Miguel Paulista" >Câmpus São Miguel Paulista</option>
+        <option value="Câmpus São Paulo" >Câmpus São Paulo</option>
+        <option value="Câmpus São Roque" >Câmpus São Roque</option>
+        <option value="Câmpus Sertãozinhoa" >Câmpus Sertãozinhoa</option>
+        <option value="Câmpus Sorocaba" >Câmpus Sorocaba</option>
+        <option value="Câmpus Suzano" >Câmpus Suzano</option>
+        <option value="Câmpus Votuporanga" >Câmpus Votuporanga</option>
+
+      </select><br><br>
+      
+      <h2>Suas areás de interesses:<br>
+      <input type="checkbox" name="tec" value="t">Tecnologia
+      <input type="checkbox" name="exa" value="e">Exatas
+      <input type="checkbox" name="hum" value="h">Humanas<br>
+      <input type="checkbox" name="bio" value="b">Biológicas
+      <input type="checkbox" name="educ" value="ed">Educação<br><br>
+    
+      <h2>Seus hobbies:<br>
+      <input type="checkbox" name="Jar" value="j">Jardinagem
+      <input type="checkbox" name="Art" value="A">Artesanato
+      <input type="checkbox" name="lei" value="l">Leitura<br>
+      <input type="checkbox" name="escri" value="es">Escrita
+      <input type="checkbox" name="mus" value="m">Música<br>
+      <input type="checkbox" name="Pin" value="P">Pintura
+      <input type="checkbox" name="Rs" value="R">Redes sociais
+      <input type="checkbox" name="via" value="v">Viagens<br>
+      <input type="checkbox" name="ser" value="s">Séries
+      <input type="checkbox" name="acad" value="ac">Academia
+      <input type="checkbox" name="out" value="o">Outros<br><br>
+      
+    
+    <h2>Suas sugestões:<br></h2>
+    <textarea  name="sug" rows="5" cols="50" >Digite aqui sua sugestão:</textarea><br><br>
+    
+
+    <input value="ENVIAR" type="button" onclick="funcao();"/>
+    
+<br><br><br>
+
+
+<h2> Suas informações aparecerão aqui após clicar em "Eviar: <p id="destino"></h2>
+
+</form>
+</center>
+</body>
+</html>
